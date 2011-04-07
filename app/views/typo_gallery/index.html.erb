@@ -1,0 +1,21 @@
+<style type='text/css'>
+.clear {
+	display: block;
+	clear: both;
+}
+
+.typo_gallery_container {
+	float: left;
+	margin-right: 10px;
+	padding-bottom: 10px;
+}
+
+</style>
+
+<% @resources.each do |image| %>
+<div class='typo_gallery_container'>
+<%= link_to("<img class='tumb' src='#{this_blog.base_url}/files/thumb_#{image.filename}' alt='#{this_blog.base_url}/files/#{image.filename}' />".html_safe, :action => 'show', :id => image.id).html_safe %>
+</div>
+<% end %>
+<br class='clear' />
+<%=     will_paginate(@resources) %>

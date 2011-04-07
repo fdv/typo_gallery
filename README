@@ -1,0 +1,18 @@
+TypoGallery
+===========
+
+A 20 minutes proof of concept for a Gallery plugin for Typo, using existing resources. It has pagination, lightbox etc... Crappy, but it's a POC.
+
+Gallery is accessed at yourblog/gallery
+
+Needs the HEAD version of Typo as on April the 7th 2011.
+
+Please, add this in your config.routes.rb after the ActionController::Routing::Routes.draw do |map|
+
+# Gallery plugin
+map.connect 'gallery/page/:id', :controller => 'typo_gallery', :action => 'index'
+map.connect 'gallery/:action/:id', :controller => 'typo_gallery'
+
+And restart your Typo.
+
+Copyright (c) 2011 Frédéric de Villamil, released under the MIT license

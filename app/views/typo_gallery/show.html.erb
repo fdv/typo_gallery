@@ -1,0 +1,6 @@
+<%= javascript_include_tag 'lightbox' %>
+<%= stylesheet_link_tag 'lightbox' %>
+
+<a href='<%= "#{this_blog.base_url}/files/#{@image.filename}" %>' rel='lightbox'>
+<%= "<img class='tumb' src='#{this_blog.base_url}/files/medium_#{@image.filename}' alt='#{this_blog.base_url}/files/#{@image.filename}' />" %>
+</a>
