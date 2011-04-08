@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.connect 'gallery/page/:id', :controller => 'typo_gallery', :action => 'index'
-  map.connect 'gallery/:action/:id', :controller => 'typo_gallery'
+  map.connect 'gallery/page/:id', :controller => 'typo_album', :action => 'index'
+  map.connect 'gallery/:action/:id', :controller => 'typo_album'
   
   %w{typo_album typo_image }.each do |i|
     map.connect "/admin/#{i}", :controller => "admin/#{i}", :action => 'index'

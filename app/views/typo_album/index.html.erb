@@ -1,0 +1,6 @@
+<% @albums.each do |album| %>
+	<div class='typo_album'>
+		<%= album.typo_images.first.title unless album.typo_images.count == 0 %>
+		<h3><%= album.title %></h3>
+	</div>
+<% end %>
