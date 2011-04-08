@@ -1,0 +1,4 @@
+<% @page_heading = _('New Albums') %>
+<% subtabs_for(:typogallery) %>
+
+<%= render :partial => "form", :locals => { :form_type => "typo_album", :form_action => { :action => "new", :id => @album.id }} %>

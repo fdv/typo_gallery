@@ -1,0 +1,17 @@
+<%= form_tag(form_action, :id => "#{form_type}_form", :enctype => "multipart/form-data") do %>
+
+<%= error_messages_for 'typo_album' %>
+<div>
+  <h2><label for="album_title"><%= _("Title")%></label> </h2>
+  <p class='input_text_title'>
+    <%= text_field :album, :title, :class => 'large'  %>
+  </p>
+</div>
+<div>
+  <h3><label for="album_description" class="content block"><%= _("Description") %></label></h3>
+  <p class='input_text_title'>
+    <%= text_area :album, :description, :rows => 5, :class => 'large' %>
+  </p>
+</div>
+<%= cancel_or_save %>
+<% end %>

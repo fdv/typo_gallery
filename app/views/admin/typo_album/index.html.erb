@@ -1,0 +1,21 @@
+<% @page_heading = _('Manage Albums') %>
+<% @link_to_new = link_to(_("New Album"), {:controller => 'typo_album', :action => 'new'}, :id => 'dialog-link', :class => 'button') %>
+
+<% subtabs_for(:typogallery) %>
+
+<table>
+  <tr>
+    <th><%= _("Title") %></th>
+    <th><%= _("Description") %></th>
+  </tr>
+
+  <tbody id="articleList">
+		<%= render_void_table(@albums.size, 2)  %>
+		<% @albums.each do |album| %>
+			<tr>
+				<td><%= album.title %></td>
+				<td><%= album.description %></td>
+			</tr>
+		<% end%>
+  </tbody>
+</table>
